@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Werror
 EXECUTABLE = 3HeadTRPO
 
-all: bin/$(EXECUTABLE) bin/$(EXETEST)
+all: $(EXECUTABLE) $(EXETEST)
 
 $(EXECUTABLE): code.o
 	$(CC) $(CFLAGS) $^ -o $@
