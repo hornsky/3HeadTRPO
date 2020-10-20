@@ -131,10 +131,11 @@ void add(FILE *dv) {
       printf("Enter %d number grade : ", i + 1);
       scanf("%d", &pp1.grade[i]);
       
-      if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5)) {
-        puts("\nERROR : area of your grade[2-5]. try again.\n");
-        i--;
-    	}
+
+       if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5)) {
+         puts("\nERROR : area of your grade[2-5]. try again.\n");
+         i--;
+      }
     }
 
     fwrite(&pp1, sizeof(pp1), 1, dv);
