@@ -1,12 +1,9 @@
 dist: xenial
 
-os:
-  windows
-
 language: c
 
 compiler : gcc
 
 script:
   - make
-  - clang-format -i code.c
+  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
