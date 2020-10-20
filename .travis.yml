@@ -6,4 +6,4 @@ compiler : gcc
 
 script:
   - make
-  - clang-format -r code.c
+  - clang-format -i code.c
