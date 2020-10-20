@@ -31,16 +31,16 @@ int main() {
 
     switch (c) {
     case '1':
-      input(dv);
+      input();
       break;
     case '2':
-      print(dv);
+      print();
       break;
     case '3':
-      add(dv);
+      add;
       break;
     case '4':
-      find2(dv);
+      find2();
       break;
     case '0':
       return (0);
