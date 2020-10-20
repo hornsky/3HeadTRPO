@@ -6,4 +6,4 @@ compiler : gcc
 
 script:
   - make
-  - ./run-clang-format.py -r src
+  - clang-format -r code.c
