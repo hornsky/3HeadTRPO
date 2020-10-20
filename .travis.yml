@@ -1,8 +1,5 @@
 dist: xenial
 
-os:
-  windows
-
 language: c
 
 compiler : gcc
