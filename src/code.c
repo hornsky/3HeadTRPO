@@ -132,9 +132,9 @@ void add(FILE *dv) {
       scanf("%d", &pp1.grade[i]);
       
 
-       if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5)) {
-         puts("\nERROR : area of your grade[2-5]. try again.\n");
-         i--;
+      if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5)) {
+        puts("\nERROR : area of your grade[2-5]. try again.\n");
+        i--;
       }
     }
 
