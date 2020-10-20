@@ -6,3 +6,4 @@ compiler : gcc
 
 script:
   - make
+  - git ls-files code.c | xargs clang-format -i && git diff --exit-code
