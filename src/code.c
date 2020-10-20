@@ -1,7 +1,7 @@
+#include <curses.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <curses.h>
 
 struct vot {
   char surname[10];
@@ -62,7 +62,7 @@ void input(FILE *dv) {
 
   do {
     printf("\nStrudent surname : ");
-    scanf("%s", &pp1.surname);
+    scanf("%c", &pp1.surname);
 
     printf("Gradebook number : ");
     scanf("%d", &pp1.grade_book);
