@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <curses.h>
 
 struct vot {
   char surname[10];
