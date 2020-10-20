@@ -2,13 +2,13 @@ CC = gcc
 CFLAGS = -Wall -Werror
 EXECUTABLE = 3HeadTRPO
 
-all: $(EXECUTABLE) $(EXETEST)
+all: 3HeadTRPO
 
-$(EXECUTABLE): code.o
-	$(CC) $(CFLAGS) $^ -o $@
+code.exe: code.o
+	gcc -Wall -Werror code.c -o code
 
 code.o: code.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	gcc -Wall -Werror code.c -c
 
 .PHONY: clean
 
