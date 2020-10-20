@@ -60,8 +60,8 @@ void input(FILE *dv) {
   printf("Enter student.\n");
 
   do {
-    printf("\nStrudent surname : ");
-    scanf("%c", pp1.surname);
+    printf("\nStudent surname : ");
+    scanf("%s", pp1.surname);
 
     printf("Gradebook number : ");
     scanf("%d", &pp1.grade_book);
@@ -121,7 +121,7 @@ void add(FILE *dv) {
   printf("Enter student.\n");
 
   do {
-    printf("\nStrudent surname : ");
+    printf("\nStudent surname : ");
     scanf("%s", pp1.surname);
 
     printf("Gradebook number : ");
