@@ -181,3 +181,4 @@ void find2(FILE *dv) {
   }
   fclose(dv);
 }
+// вот
