@@ -1,8 +1,14 @@
-code.exe: code.o
-	gcc code.o -o code
+CC = gcc
+CFLAGS = -Wall -Werror
+EXECUTABLE = 3HeadTRPO
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): code.o
+	$(CC) $(CFLAGS) $^ -o $@
 
 code.o: code.c
-	gcc code.c -c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
