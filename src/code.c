@@ -15,7 +15,6 @@ void add();
 void find2();
 
 int main() {
-  FILE *dv;
   char c;
 
   while (1) {
@@ -37,7 +36,7 @@ int main() {
       print();
       break;
     case '3':
-      add;
+      add();
       break;
     case '4':
       find2();
