@@ -130,7 +130,6 @@ void add(FILE *dv) {
     for (i = 0; i <= 3; i++) {
       printf("Enter %d number grade : ", i + 1);
       scanf("%d", &pp1.grade[i]);
-      
       if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5)) {
         puts("\nERROR : area of your grade[2-5]. try again.\n");
         i--;
