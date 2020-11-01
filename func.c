@@ -106,7 +106,7 @@ void add(FILE *dv)
 	fclose(dv);
 }
 
-int find2(FILE *dv)
+int find3(FILE *dv)
 {
 	system("CLS");
 	int i;
@@ -125,6 +125,23 @@ int find2(FILE *dv)
 			}
 		}
 		fread(&pp1, sizeof(pp1), 1, dv);
+	}
+	fclose(dv);
+	return(0);
+}
+
+int find2(pp1)
+{
+	system("CLS");
+	int i;
+
+	for(i = 0; i <= 3; i++)
+	{
+		if(pp1.grade[i] == 2)
+		{
+			printf("Surname : %s\nGrade book : %d\n%d Number grade is %d\n", pp1.surname, pp1.grade_book, i + 1, pp1.grade[i]);
+			printf("\n");
+		}
 	}
 	fclose(dv);
 	return(0);
