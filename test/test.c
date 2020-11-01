@@ -8,9 +8,7 @@
 #define CATCH_CONFIG_MAIN
 #include "ctest.h"
 
-#define testfilepath "./test/jurnal.dat"
-
-CTEST(testfilepath, find2) //Поиск символа в строке
+CTEST(find2) //Поиск символа в строке
 {
 	struct vot {char surname[10]; int grade_book; int grade[3];} pp1;
 	pp1.surname = "Hornsky";
