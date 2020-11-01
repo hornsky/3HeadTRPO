@@ -10,7 +10,7 @@
 
 #define testfilepath "./test/jurnal.dat"
 
-TEST_CASE("testfind2")
+TEST_CASE('testfind2')
 {
     REQUIRE(find2(testfilepath));    
 }
