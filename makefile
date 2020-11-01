@@ -1,16 +1,20 @@
-CC = gcc
-CFLAGS = -Wall -Werror
-EXECUTABLE = 3HeadTRPO
+all: hello
 
-all: src/
+hello: main.o test.o
 
-src/$(EXECUTABLE): src/code.o
-	$(CC) $(CFLAGS) $^ -o $@
+main.o:
+	gcc main.c -o main
 
-src/code.o: src/code.c
-	$(CC) $(CFLAGS) -c $< -o $@
+test.o:
+	gcc ./test/test.c -o ./test/test
+
+test:
+	./test/test
+
+run:
+	./prog
 
 .PHONY: clean
 
 clean:
-	rm -rf src/*.o
+	rm -rf *.o
