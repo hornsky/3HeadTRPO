@@ -8,7 +8,7 @@
 #define CATCH_CONFIG_MAIN
 #include "ctest.h"
 
-CTEST(find2) //Поиск символа в строке
+CTEST(pp1, find2) //Поиск символа в строке
 {
 	struct vot {char surname[10]; int grade_book; int grade[3];} pp1;
 	pp1.surname = "Hornsky";
@@ -18,7 +18,8 @@ CTEST(find2) //Поиск символа в строке
 	pp1.grade[2] = "4";
 	pp1.grade[3] = "5";
 	
-	void real = find2(pp1);
+	int real = find2(pp1);
+	const int expected = 0;
 
-	ASSERT_EQUAL(real);
+	ASSERT_EQUAL(expected, real);
 }

@@ -106,7 +106,7 @@ void add(FILE *dv)
 	fclose(dv);
 }
 
-void find2(FILE *dv)
+int find2(FILE *dv)
 {
 	system("CLS");
 	int i;
@@ -127,4 +127,5 @@ void find2(FILE *dv)
 		fread(&pp1, sizeof(pp1), 1, dv);
 	}
 	fclose(dv);
+	return(0);
 }
