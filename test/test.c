@@ -6,7 +6,7 @@
 #include "../func.c"
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "ctest.h"
 
 #define testfilepath "./test/jurnal.dat"
 
