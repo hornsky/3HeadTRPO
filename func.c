@@ -106,7 +106,7 @@ void add(FILE *dv)
 	fclose(dv);
 }
 
-int find2(FILE *dv)
+void find2(FILE *dv)
 {
 	system("CLS");
 	int i;
