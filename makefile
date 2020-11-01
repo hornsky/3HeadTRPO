@@ -1,12 +1,18 @@
 all: hello
 
-hello: main.o test.o
+hello: main.c test.c
+
+main.c:
+	gcc main.c -c
 
 main.o:
-	gcc main.c -o main
+	gcc main.o -o main
+
+test.c:
+	gcc ./test/test.c -c
 
 test.o:
-	gcc ./test/test.c -o ./test/test
+	gcc ./test/test.o -o ./test/test
 
 test:
 	./test/test
