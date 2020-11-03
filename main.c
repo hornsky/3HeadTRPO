@@ -29,10 +29,10 @@ int main()
 
 		switch(c)
 		{
-			case '1': input(dv); break;
-			case '2': print(dv); break;
-			case '3': add(dv); break;
-			case '4': find2(dv); break;
+			case '1': input(); break;
+			case '2': print(); break;
+			case '3': add(); break;
+			case '4': find2(); break;
 			case '0': return(0);
 			default : puts("WRONG MODE"); getch();
 		}
