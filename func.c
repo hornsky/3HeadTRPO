@@ -5,7 +5,7 @@
 
 struct vot {char surname[10]; int grade_book; int grade[3];} pp1;
 
-void input(FILE *dv)
+int input(FILE *dv)
 {
 	int i;
 	char ch;
@@ -47,7 +47,7 @@ void input(FILE *dv)
 	return(0);
 }
 
-void print(FILE *dv)
+int print(FILE *dv)
 {
 	system("CLS");
 
@@ -75,7 +75,7 @@ void print(FILE *dv)
 	return(0);
 }
 
-void add(FILE *dv)
+int add(FILE *dv)
 {
 	system("CLS");
 	int i;
@@ -109,7 +109,7 @@ void add(FILE *dv)
 	return(0);
 }
 
-void find2(FILE *dv)
+int find2(FILE *dv)
 {
 	system("CLS");
 	int i;

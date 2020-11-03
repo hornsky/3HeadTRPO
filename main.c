@@ -5,9 +5,9 @@
 
 #include "func.c"
 
-void input();
-void print();
-void add();
+int input();
+int print();
+int add();
 int find2();
 
 int main()
