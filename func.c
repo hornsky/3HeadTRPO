@@ -5,9 +5,9 @@
 
 struct vot {char surname[10]; int grade_book; int grade[3];} pp1;
 
-void input(FILE *dv)
+int input(FILE *dv)
 {
-	int i, gb;
+	int i;
 	char ch;
 	dv = fopen("jurnal.dat", "wb");
 
@@ -44,9 +44,10 @@ void input(FILE *dv)
 	while(ch == 'n');
 
 	fclose(dv);
+	return(0);
 }
 
-void print(FILE *dv)
+int print(FILE *dv)
 {
 	system("CLS");
 
@@ -71,9 +72,10 @@ void print(FILE *dv)
 
 	fclose(dv);
 	getch();
+	return(0);
 }
 
-void add(FILE *dv)
+int add(FILE *dv)
 {
 	system("CLS");
 	int i;
@@ -104,12 +106,15 @@ void add(FILE *dv)
 	}
 	while(ch == 'n');
 	fclose(dv);
+	return(0);
 }
 
-int find3(FILE *dv)
+int find2(FILE *dv)
 {
 	system("CLS");
 	int i;
+	long int j;
+	char ch;
 	dv = fopen("jurnal.dat", "rb+");
 
 	fread(&pp1, sizeof(pp1), 1, dv);
@@ -121,27 +126,27 @@ int find3(FILE *dv)
 			if(pp1.grade[i] == 2)
 			{
 				printf("Surname : %s\nGrade book : %d\n%d Number grade is %d\n", pp1.surname, pp1.grade_book, i + 1, pp1.grade[i]);
-				printf("\n");
+				printf("\nDo you want change %d number grade? : y/n\n", i + 1);
+				ch = getch();
+
+				if (ch == 'y')
+				{
+					printf("\nWhat grade do you want to change? : ");
+					scanf("%d", &pp1.grade[i]);
+
+					j = sizeof(pp1);
+
+					fseek(dv, -j, SEEK_CUR);
+					fwrite(&pp1, sizeof(pp1), 1, dv);
+					fflush(dv);
+					printf("\nchanges are successful\n");
+					printf("%d Number grade is %d\n", i + 1, pp1.grade[i]);
+					getch();
+					printf("\n");
+				}
 			}
 		}
 		fread(&pp1, sizeof(pp1), 1, dv);
-	}
-	fclose(dv);
-	return(0);
-}
-
-int find2(pp1)
-{
-	system("CLS");
-	int i;
-
-	for(i = 0; i <= 3; i++)
-	{
-		if(pp1.grade[i] == 2)
-		{
-			printf("Surname : %s\nGrade book : %d\n%d Number grade is %d\n", pp1.surname, pp1.grade_book, i + 1, pp1.grade[i]);
-			printf("\n");
-		}
 	}
 	fclose(dv);
 	return(0);
