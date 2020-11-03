@@ -1,18 +1,16 @@
+CC = gcc
+CFLAGS = -c -Wall
+
 all: hello
 
-hello: main.c test.c
+hello: main.o test.o
+	$(CC) main.o test.o -o 
 
-main.c:
-	gcc main.c -c
+main.o: main.c
+	$(CC) $(CFLAGS) main.c
 
-main.o:
-	gcc main.o -o main
-
-test.c:
-	gcc ./test/test.c -c
-
-test.o:
-	gcc ./test/test.o -o ./test/test
+test.o: test.c
+	$(CC) $(CFLAGS) test.c
 
 test:
 	./test/test
