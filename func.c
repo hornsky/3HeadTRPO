@@ -5,7 +5,7 @@
 
 struct vot {char surname[10]; int grade_book; int grade[3];} pp1;
 
-int input(FILE *dv)
+void input(FILE *dv)
 {
 	int i;
 	char ch;
@@ -26,7 +26,7 @@ int input(FILE *dv)
 		for(i = 0; i <= 3; i++)
 		{
 			printf("Enter %d number grade : ", i + 1);
-			gb = scanf("%d", &pp1.grade[i]);
+			scanf("%d", &pp1.grade[i]);
 			
 			if ((pp1.grade[i] < 2) || (pp1.grade[i] > 5))
 			{
@@ -47,7 +47,7 @@ int input(FILE *dv)
 	return(0);
 }
 
-int print(FILE *dv)
+void print(FILE *dv)
 {
 	system("CLS");
 
@@ -75,7 +75,7 @@ int print(FILE *dv)
 	return(0);
 }
 
-int add(FILE *dv)
+void add(FILE *dv)
 {
 	system("CLS");
 	int i;
@@ -109,7 +109,7 @@ int add(FILE *dv)
 	return(0);
 }
 
-int find2(FILE *dv)
+void find2(FILE *dv)
 {
 	system("CLS");
 	int i;
